@@ -7,6 +7,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier, MLPRegressor
 from sklearn.metrics import accuracy_score, mean_absolute_error
 import joblib
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import confusion_matrix 
 
 # --- Configuration ---
 DATA_PATH = 'data/'
@@ -112,5 +115,28 @@ accuracy_e = accuracy_score(y_test_e, y_pred_e)
 print(f"Emotion Model Accuracy: {accuracy_e * 100:.2f}%")
 joblib.dump(emotion_model, os.path.join(MODELS_PATH, 'emotion_model.pkl'))
 print("Emotion model saved.")
+
+
+# --- NEW: Generate and Save Confusion Matrix ---
+print("\n--- Generating Confusion Matrix for Emotion Model ---")
+# Create assets folder if it doesn't exist
+ASSETS_PATH = 'assets/'
+os.makedirs(ASSETS_PATH, exist_ok=True) 
+
+# Calculate the confusion matrix
+cm = confusion_matrix(y_test_e, y_pred_e, labels=emotion_model.classes_)
+
+# Create a plot
+plt.figure(figsize=(10, 8))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', 
+            xticklabels=emotion_model.classes_, yticklabels=emotion_model.classes_)
+plt.title('Confusion Matrix for Emotion Model')
+plt.ylabel('Actual Label')
+plt.xlabel('Predicted Label')
+
+# Save the plot
+plt.savefig(os.path.join(ASSETS_PATH, 'emotion_confusion_matrix.png'))
+print(f"Confusion matrix saved to {os.path.join(ASSETS_PATH, 'emotion_confusion_matrix.png')}")
+# plt.show() # Uncomment this line if you want to see the plot immediately after training
 
 print("\nAll models trained and saved successfully!")
