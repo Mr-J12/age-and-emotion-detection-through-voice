@@ -56,7 +56,8 @@ Follow these steps to get the project running on your local machine.
 
 #### Step 1: Clone the Repository
 ```bash
-git clone [https://github.com/Mr-J12/age-and-emotion-detection-through-voice.git](https://github.com/Mr-J12/age-and-emotion-detection-through-voice.git)
+git clone [https://github.com/Mr-J12/age-and-emotion-detection-through-voice.git]
+cd age-and-emotion-detection-through-voice
 ```
 
 #### Step 2: Set Up the Dataset
