@@ -1,0 +1,116 @@
+Loading data for evaluation...
+No cache found; extracting features from audio files (this may take several minutes)...
+Error processing data/Actor_01\03-01-01-01-01-01-01.wav: cannot access local variable 'parent' where it is not associated with a value
+Extracted features for 20/1440 files
+Extracted features for 40/1440 files
+Extracted features for 60/1440 files
+Extracted features for 80/1440 files
+Extracted features for 100/1440 files
+Extracted features for 120/1440 files
+Extracted features for 140/1440 files
+Extracted features for 160/1440 files
+Extracted features for 180/1440 files
+Extracted features for 200/1440 files
+Extracted features for 220/1440 files
+Extracted features for 240/1440 files
+Extracted features for 260/1440 files
+Extracted features for 280/1440 files
+Extracted features for 300/1440 files
+Extracted features for 320/1440 files
+Extracted features for 340/1440 files
+Extracted features for 360/1440 files
+Extracted features for 380/1440 files
+Extracted features for 400/1440 files
+Extracted features for 420/1440 files
+Extracted features for 440/1440 files
+Extracted features for 460/1440 files
+Extracted features for 480/1440 files
+Extracted features for 500/1440 files
+Extracted features for 520/1440 files
+Extracted features for 540/1440 files
+Extracted features for 560/1440 files
+Extracted features for 580/1440 files
+Extracted features for 600/1440 files
+Extracted features for 620/1440 files
+Extracted features for 640/1440 files
+Extracted features for 660/1440 files
+Extracted features for 680/1440 files
+Extracted features for 700/1440 files
+Extracted features for 720/1440 files
+Extracted features for 740/1440 files
+Extracted features for 760/1440 files
+Extracted features for 780/1440 files
+Extracted features for 800/1440 files
+Extracted features for 820/1440 files
+Extracted features for 840/1440 files
+Extracted features for 860/1440 files
+Extracted features for 880/1440 files
+Extracted features for 900/1440 files
+Extracted features for 920/1440 files
+Extracted features for 940/1440 files
+Extracted features for 960/1440 files
+Extracted features for 980/1440 files
+Extracted features for 1000/1440 files
+Extracted features for 1020/1440 files
+Extracted features for 1040/1440 files
+Extracted features for 1060/1440 files
+Extracted features for 1080/1440 files
+Extracted features for 1100/1440 files
+Extracted features for 1120/1440 files
+Extracted features for 1140/1440 files
+Extracted features for 1160/1440 files
+Extracted features for 1180/1440 files
+Extracted features for 1200/1440 files
+Extracted features for 1220/1440 files
+Extracted features for 1240/1440 files
+Extracted features for 1260/1440 files
+Extracted features for 1280/1440 files
+Extracted features for 1300/1440 files
+Extracted features for 1320/1440 files
+Extracted features for 1340/1440 files
+Extracted features for 1360/1440 files
+Extracted features for 1380/1440 files
+Extracted features for 1400/1440 files
+Extracted features for 1420/1440 files
+Extracted features for 1440/1440 files
+Saved extracted features to cache: cached_features.npz
+Total samples: 1439
+
+Evaluating saved models...
+gender - Accuracy: 0.9965, Precision: 0.9966, Recall: 0.9965, F1: 0.9965
+Saved confusion matrix to C:\Users\yashw\OneDrive\Desktop\intership\Age and Emotion Detection through voice\plots\gender_confusion_matrix.png
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      female       0.99      1.00      1.00       150
+        male       1.00      0.99      1.00       138
+
+    accuracy                           1.00       288
+   macro avg       1.00      1.00      1.00       288
+weighted avg       1.00      1.00      1.00       288
+
+emotion - Accuracy: 0.5382, Precision: 0.5883, Recall: 0.5382, F1: 0.5081
+Saved confusion matrix to C:\Users\yashw\OneDrive\Desktop\intership\Age and Emotion Detection through voice\plots\emotion_confusion_matrix.png
+
+Classification Report:
+              precision    recall  f1-score   support
+
+       angry       0.68      0.65      0.67        40
+        calm       0.47      0.82      0.60        50
+     disgust       1.00      0.11      0.20        27
+     fearful       0.55      0.66      0.60        35
+       happy       0.61      0.44      0.51        32
+     neutral       0.50      0.06      0.10        18
+         sad       0.43      0.49      0.45        41
+   surprised       0.59      0.60      0.59        45
+
+    accuracy                           0.54       288
+   macro avg       0.60      0.48      0.46       288
+weighted avg       0.59      0.54      0.51       288
+
+Age Model MAE: 3.9330
+Saved age scatter plot to C:\Users\yashw\OneDrive\Desktop\intership\Age and Emotion Detection through voice\plots\age_actual_vs_predicted.png
+
+Evaluation results summary:
+{'gender': {'accuracy': 0.9965277777777778, 'precision': 0.9965507726269315, 'recall': 0.9965277777777778, 'f1': 0.996527232457465, 'confusion_matrix_path': 'C:\\Users\\yashw\\OneDrive\\Desktop\\intership\\Age and Emotion Detection through voice\\plots\\gender_confusion_matrix.png'}, 'emotion': {'accuracy': 0.5381944444444444, 'precision': 0.5883208991964141, 'recall': 0.5381944444444444, 'f1': 0.5081018552277676, 'confusion_matrix_path': 'C:\\Users\\yashw\\OneDrive\\Desktop\\intership\\Age and Emotion Detection through voice\\plots\\emotion_confusion_matrix.png'}, 'age': {'mae': 3.93303382396698, 'plot': 'C:\\Users\\yashw\\OneDrive\\Desktop\\intership\\Age and Emotion Detection through voice\\plots\\age_actual_vs_predicted.png'}}

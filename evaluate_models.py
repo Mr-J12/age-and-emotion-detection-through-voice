@@ -7,7 +7,7 @@ import seaborn as sns
 from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, classification_report)
 
 
-MODELS_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'saved_models')
+MODELS_PATH = os.path.join(os.path.dirname(__file__), 'saved_models')
 PLOTS_PATH = os.path.join(os.path.dirname(__file__), 'plots')
 os.makedirs(PLOTS_PATH, exist_ok=True)
 
