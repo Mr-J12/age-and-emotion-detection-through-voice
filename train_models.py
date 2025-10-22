@@ -119,9 +119,9 @@ print("Emotion model saved.")
 
 # --- NEW: Generate and Save Confusion Matrix ---
 print("\n--- Generating Confusion Matrix for Emotion Model ---")
-# Create assets folder if it doesn't exist
-ASSETS_PATH = 'assets/'
-os.makedirs(ASSETS_PATH, exist_ok=True) 
+# Save plots under evaluation/plots/
+PLOTS_DIR = os.path.join('evaluation', 'plots')
+os.makedirs(PLOTS_DIR, exist_ok=True)
 
 # Calculate the confusion matrix
 cm = confusion_matrix(y_test_e, y_pred_e, labels=emotion_model.classes_)
@@ -135,8 +135,9 @@ plt.ylabel('Actual Label')
 plt.xlabel('Predicted Label')
 
 # Save the plot
-plt.savefig(os.path.join(ASSETS_PATH, 'emotion_confusion_matrix.png'))
-print(f"Confusion matrix saved to {os.path.join(ASSETS_PATH, 'emotion_confusion_matrix.png')}")
+conf_path = os.path.join(PLOTS_DIR, 'emotion_confusion_matrix.png')
+plt.savefig(conf_path)
+print(f"Confusion matrix saved to {conf_path}")
 # plt.show() # Uncomment this line if you want to see the plot immediately after training
 
 print("\nAll models trained and saved successfully!")

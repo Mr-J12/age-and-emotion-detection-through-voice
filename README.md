@@ -48,7 +48,8 @@ Before training, the distribution of emotions in the dataset was analyzed. Ensur
 A confusion matrix was used to evaluate the performance of the Emotion Classification model. The diagonal axis shows the number of correct predictions, while off-diagonal cells highlight where the model gets confused (e.g., mistaking 'sad' for 'calm'). This insight is vital for targeted model improvement.
 
 ### Confusion Matrix : 
-![confusion matrix](assets/emotion_confusion_matrix.png)
+The confusion matrix and other evaluation plots are saved under `evaluation/plots/` after training or when running the evaluation module.
+![confusion matrix](evaluation/plots/emotion_confusion_matrix.png)
 
 ## 🚀 Setup and Installation Guide
 
@@ -85,6 +86,10 @@ Run the training script to process the audio data and create the models. This wi
 ```bash
 python train_models.py
 ```
+
+#### Step 4.1: Evaluate Models (optional)
+After training you can evaluate the models and produce plots by loading the saved test splits inside an interactive session or by importing the evaluation helper. A minimal example from a Python REPL:
+
 
 #### Step 5: Run the Streamlit Application
 Launch the web application using Streamlit. Your default web browser will open with the GUI.
