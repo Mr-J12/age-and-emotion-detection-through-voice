@@ -48,8 +48,12 @@ Before training, the distribution of emotions in the dataset was analyzed. Ensur
 A confusion matrix was used to evaluate the performance of the Emotion Classification model. The diagonal axis shows the number of correct predictions, while off-diagonal cells highlight where the model gets confused (e.g., mistaking 'sad' for 'calm'). This insight is vital for targeted model improvement.
 
 ### Confusion Matrix : 
-The confusion matrix and other evaluation plots are saved under `evaluation/plots/` after training or when running the evaluation module.
-![confusion matrix](evaluation/plots/emotion_confusion_matrix.png)
+The confusion matrix and other evaluation plots are saved under `plots/` after training or when running the evaluation module.
+![confusion matrix](plots/emotion_confusion_matrix.png)
+
+### Stack Plot :
+The stack plot and other evaluation plots are saved under `plots/` after training or when running the evaluation module.
+![plot](plots/age_actual_vs_predicted.png)
 
 ## 🚀 Setup and Installation Guide
 
