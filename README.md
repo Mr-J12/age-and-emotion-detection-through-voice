@@ -55,6 +55,11 @@ The confusion matrix and other evaluation plots are saved under `plots/` after t
 The stack plot and other evaluation plots are saved under `plots/` after training or when running the evaluation module.
 ![plot](plots/age_actual_vs_predicted.png)
 
+## Prediction
+![r1](results/r1.png)
+---
+![r2](results/r2.png)
+
 ## 🚀 Setup and Installation Guide
 
 Follow these steps to get the project running on your local machine.
